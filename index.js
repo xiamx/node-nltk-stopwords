@@ -2,7 +2,7 @@ var fs = require('fs');
 var path = require('path');
 
 function load(language) {
-    f = fs.readFileSync(path.join('data', 'stopwords', language), {
+    f = fs.readFileSync(path.join(__dirname, 'data', 'stopwords', language), {
         encoding: "utf-8"
     });
     return new Set(f.split('\n'));
