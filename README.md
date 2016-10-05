@@ -33,4 +33,4 @@ stopwords.remove([ 'A', 'sentence', 'can', 'not', 'be', 'without', 'stopwords' ]
 
 ```
 
-If a string input is passed, stopwords.remove will return a string, if an array input is passed instead, the resulting return value will also be an array.
+If a string input is passed, `stopwords.remove` will return a string, if an array input is passed instead, the resulting return value will also be an array.
