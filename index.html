@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>node-nltk-stopwords by xiamx</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>node-nltk-stopwords</h1>
+        <p>A node module exposing nltk stopwords corpora and provide utility functions for removing stopwords</p>
+
+        <p class="view"><a href="https://github.com/xiamx/node-nltk-stopwords">View the Project on GitHub <small>xiamx/node-nltk-stopwords</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/xiamx/node-nltk-stopwords/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/xiamx/node-nltk-stopwords/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/xiamx/node-nltk-stopwords">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="node-nltk-stopwords" class="anchor" href="#node-nltk-stopwords" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>node-nltk-stopwords</h1>
+
+<p>A node module exposing nltk stopwords corpora and provide utility functions for removing stopwords</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-source-shell"><pre>npm install --save nltk-stopwords</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> stopwords <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>nltk-stopwords<span class="pl-pds">'</span></span>)
+
+<span class="pl-c">// let's load english stopwords</span>
+<span class="pl-k">var</span> english <span class="pl-k">=</span> <span class="pl-smi">stopwords</span>.<span class="pl-c1">load</span>(<span class="pl-s"><span class="pl-pds">'</span>english<span class="pl-pds">'</span></span>)
+
+<span class="pl-c">// Remove stopwords from a sentence</span>
+<span class="pl-smi">stopwords</span>.<span class="pl-c1">remove</span>(<span class="pl-s"><span class="pl-pds">"</span>A sentence can not be without stopwords<span class="pl-pds">"</span></span>, english)
+<span class="pl-c">// This should output</span>
+<span class="pl-c">// 'A sentence without stopwords'</span>
+
+<span class="pl-c">// You can also pass a string of language in the second parameter, `stopwords.remove` will handle stopword loading.</span>
+<span class="pl-smi">stopwords</span>.<span class="pl-c1">remove</span>(<span class="pl-s"><span class="pl-pds">"</span>J'essaye de trouver un bon example<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>french<span class="pl-pds">"</span></span>)
+<span class="pl-c">// This should output</span>
+<span class="pl-c">// "J'essaye trouver bon example"</span></pre></div>
+
+<p>By default, the sentence is tokenized by whitespace. You can also pass an array of tokenized string instead.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">stopwords</span>.<span class="pl-c1">remove</span>([ <span class="pl-s"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>sentence<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>can<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>not<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>be<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>without<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>stopwords<span class="pl-pds">'</span></span> ], english)
+<span class="pl-c">// This should output </span>
+<span class="pl-c">// [ 'A', 'sentence', 'without', 'stopwords' ]</span>
+</pre></div>
+
+<p>If a string input is passed, <code>stopwords.remove</code> will return a string, if an array input is passed instead, the resulting return value will also be an array.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/xiamx">xiamx</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
