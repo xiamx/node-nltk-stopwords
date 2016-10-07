@@ -1,6 +1,6 @@
 {
   "name": "nltk-stopwords",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A node module exposing nltk stopwords corpora and provide utility functions for removing stopwords",
   "main": "index.js",
   "scripts": {
