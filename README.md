@@ -1,6 +1,11 @@
 # node-nltk-stopwords
 A node module exposing nltk stopwords corpora and provide utility functions for removing stopwords
 
+[![Homepage](https://img.shields.io/badge/Home-Page-green.svg)]()
+[![GitHub tag](https://img.shields.io/github/tag/xiamx/node-nltk-stopwords.svg?maxAge=2592000)]()
+[![npm](https://img.shields.io/npm/v/nltk-stopwords.svg?maxAge=2592000)]()
+[![license](https://img.shields.io/npm/l/nltk-stopwords.svg?maxAge=2592000)]()
+
 ## Usage
 ```bash
 npm install --save nltk-stopwords
